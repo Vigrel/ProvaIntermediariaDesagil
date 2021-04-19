@@ -37,8 +37,15 @@ public class Video {
 		for(Integer num: avaliacoes.values()) {
 			total += num;
 		}
-		return (int) Math.round(total/avaliacoes.size());
+		
+		if(avaliacoes.size() == 0) {
+			return 0;
+		}
+		
+		int somaMedias = (int) Math.round(total/((double) avaliacoes.size()));
+		return somaMedias;
 	}
+	
 
 }
 
